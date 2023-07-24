@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .column {
+            padding: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my Responsive Grid Layout</h1>
+    </header>
+    <div class="container">
+        <div class="column">
+            <h2>Column 1</h2>
+            <p>This is the content of the first column.</p>
+        </div>
+        <div class="column">
+            <h2>Column 2</h2>
+            <p>This is the content of the second column.</p>
+        </div>
+        <div class="column">
+            <h2>Column 3</h2>
+            <p>This is the content of the third column.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Maria Randip Leon K S. All rights reserved.</p>
+    </footer>
+</body>
+</html>
