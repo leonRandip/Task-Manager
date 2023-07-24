@@ -1,0 +1,15 @@
+body{
+    background-image: url(peakpx.jpg);
+}
+header{
+    background-color: purple;
+}
+footer{
+    background-color: grey;
+}
+button:hover{
+    color: brown;
+}
+a:hover{
+    color: brown;
+}
