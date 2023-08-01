@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+    <style>
+        /* Add some basic styling for the to-do list */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #todoList {
+            width: 300px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .todoItem {
+            margin: 5px 0;
+        }
+
+        .completed {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+
+<div id="todoList">
+    <h1>To-Do List</h1>
+    <input type="text" id="todoInput" placeholder="Enter a new task..." />
+    <button type="button" onclick="addTodo()">Add</button>
+    <ul id="listItems"></ul>
+</div>
+
+<script>
+    // Function to add a new to-do item
+    function addTodo() {
+        const todoInput = document.getElementById("todoInput");
+        const task = todoInput.value.trim();
+
+        if (task === "") {
+            alert("Please enter a valid task.");
+            return;
+        }
+
+        const listItem = document.createElement("li");
+        listItem.innerHTML = `<span class="todoItem" onclick="toggleComplete(this)">${task}</span><button onclick="removeTodoItem(this)">Remove</button>`;
+        document.getElementById("listItems").appendChild(listItem);
+
+        todoInput.value = "";
+    }
+
+    // Function to toggle completion status
+    function toggleComplete(item) {
+        item.classList.toggle("completed");
+    }
+
+    // Function to remove a to-do item
+    function removeTodoItem(item) {
+        const listItem = item.parentElement;
+        listItem.remove();
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Button</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Basic Web Page</h1>
+    </header>
+
+<h1 id="colorfulText">Hello, I'm a colorful text!</h1>
+<button id="changeColorButton">Change Color</button>
+
+<script>
+    // Function to generate a random color
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    // Function to change the text color when the button is clicked
+    function changeTextColor() {
+        const textElement = document.getElementById("colorfulText");
+        const newColor = getRandomColor();
+        textElement.style.color = newColor;
+    }
+
+    // Adding a click event listener to the button
+    const changeColorButton = document.getElementById("changeColorButton");
+    changeColorButton.addEventListener("click", changeTextColor);
+</script>
+
+</body>
+</html>
