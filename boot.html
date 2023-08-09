@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Bootstrap Modal Window</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	</script>
+	<script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+	</script>
+</head>
+<body>
+
+    <div class="container">
+      <h1>Bootstrap Modal Window </h1>
+      <h2>
+        Bootstrap Modal Window means in this page if user click the button<br>
+        Which is given below an form will appear<br>
+        That from contains Three fields they are email<br>
+        password and confirm password when user fill the form<br>
+        and click the submit button the form will get closed.<br>
+        To open the form please click the button below.
+      </h2>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="background-color: black;">Open Modal Signup Page</button>
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sign Up Page</h4>
+            </div>
+            <div class="modal-body">
+              <form>
+                <p>
+                    Enter Email</Em>:<input type="email" name="mail" id="mail">
+                </p>
+               
+                <p>
+                    Enter Password:<input type="password" name="pwd" id="pwd">
+                </p>
+                <p>
+                    Confirm Password:<input type="password" name="pwd1" id="pwd1">
+                </p>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </body>
+    </html>
+    
